@@ -1,0 +1,46 @@
+.table {
+    color: rgba($fonts-color,0.8)!important;
+    &>thead {
+        &>tr {
+            &>th {
+                border-bottom: 1px solid $table-border-color;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+    }
+    &>tbody {
+        &>tr {
+            &>td {
+                border-bottom: 1px solid $table-border-color;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.table-striped>tbody {
+    &>tr {
+        &:nth-child(odd) {
+            background-color: rgba($fonts-color, .03);
+        }
+        &>td {
+            border-top: 1px solid transparent;
+        }
+    }
+}
+
+.table-hover {
+    >tbody>tr:hover {
+        background-color: rgba($fonts-color, .08);
+    color: $fonts-color!important;
+}
+}
+
+.table-bordered,
+.table-bordered>thead>tr>th,
+.table-bordered>tbody>tr>td,
+.table-bordered>tfoot>tr>th {
+    border: 1px solid $table-border-color;
+}

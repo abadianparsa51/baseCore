@@ -1,0 +1,186 @@
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: none;
+}
+
+.btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 3px;
+  @include transition(all 0.2s);
+  font-weight: 300;
+  font-size: $default-text;
+  height: 40px;
+}
+
+.btn-link {
+  color: $fonts-color;
+  text-decoration: underline;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.btn-default,
+.btn-default:disabled:hover,
+.btn-default:hover,
+.btn-default:active:focus,
+.btn-default:focus {
+  @extend .bg-default;
+}
+
+.btn-primary {
+  @extend .bg-primary;
+  @include box-shadow(0 2px 10px 0 rgba($primary, 0.5));
+  color: darken($color: $primary, $amount: 30);
+&:hover{
+  color: darken($color: $primary, $amount: 20);
+}
+  &:active {
+  color: darken($color: $primary, $amount: 25);
+  @extend .bg-primary;
+}
+
+}
+
+.btn-success {
+  @extend .bg-success;
+  @include box-shadow(0 2px 10px 0 rgba($success, 0.5));
+  color: darken($color: $success, $amount: 30);
+  &:hover{
+    color: darken($color: $success, $amount: 20);
+  }
+    &:active {
+      @extend .bg-success;
+  }
+}
+
+.btn-danger {
+  @extend .bg-danger;
+  @include box-shadow(0 2px 10px 0 rgba($danger, 0.5));
+  color: darken($color: $danger, $amount: 30);
+  &:hover{
+    color: darken($color: $danger, $amount: 20);
+  }
+    &:active {
+      @extend .bg-danger;
+  }
+}
+
+.btn-warning {
+  @extend .bg-warning;
+  @include box-shadow(0 2px 10px 0 rgba($warning, 0.5));
+  color: darken($color: $warning, $amount: 30);
+  &:hover{
+    color: darken($color: $warning, $amount: 20);
+  }
+    &:active {
+      @extend .bg-warning;
+  }
+}
+
+.btn-info {
+  @extend .bg-info;
+  @include box-shadow(0 2px 10px 0 rgba($info, 0.5));
+  color: darken($color: $info, $amount: 30);
+  &:hover{
+    color: darken($color: $info, $amount: 20);
+  }
+    &:active {
+      @extend .bg-info;
+  }
+}
+
+.btn-sm {
+  padding: 0.35em 0.8em;
+  font-size: $default-text;
+}
+
+.btn-xs {
+  font-size: $sm-text;
+}
+.btn-lg{
+  font-size: $default-text;
+  font-weight: 300;
+
+}
+.btn-icon {
+  padding: 0.3em 0.5em;
+}
+
+.btn-group-xs > .btn,
+.btn-xs {
+  padding: 2px 5px;
+  font-size: $sm-text;
+  line-height: 1.5;
+}
+
+.btn-group-sm > .btn,
+.btn-sm {
+  font-size: $sm-text;
+  line-height: 1.5;
+}
+
+.btn-group-lg > .btn,
+.btn-lg {
+  font-size: $lg-text;
+}
+
+.btn-group-open {
+  .btn-primary {
+    @extend .bg-warning;
+  }
+}
+
+.open > .btn.dropdown-toggle {
+  &.btn.btn-default {
+    @extend .bg-default;
+  }
+  &.btn.btn-primary {
+    @extend .bg-primary;
+  }
+  &.btn-success {
+    @extend .bg-success;
+  }
+  &.btn-warning {
+    @extend .bg-warning;
+  }
+  &.btn-danger {
+    @extend .bg-danger;
+  }
+  &.btn-info {
+    @extend .bg-info;
+  }
+}
+
+.btn-group {
+  .dropdown-menu {
+    padding: 8px;
+    background: $card-bg;
+    overflow: hidden;
+    .divider {
+      margin: 0;
+      background-color: $border-color;
+    }
+    a {
+      color: $fonts-color;
+      font-size: $sm-text;
+      &:hover {
+        background: rgba($black, 0.1);
+        color: $fonts-color;
+      }
+    }
+  }
+}
+
+.btn-with-icon {
+  display: flex;
+  align-items: center;
+  span{
+    margin-right: 5px;
+  }
+  i {
+    margin: auto 5px;
+  }
+}

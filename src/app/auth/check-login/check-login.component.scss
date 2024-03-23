@@ -1,0 +1,14 @@
+mat-form-field{
+    width: 60% !important;
+    mat-hint {
+        margin-top: 10px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+} 
+.btn-login{
+    margin-top: 15PX !important;
+    width: 60% !important;
+    height: 50px !important;
+}

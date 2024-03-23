@@ -1,0 +1,49 @@
+<div class="row mt50">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <img src="/assets/images/axeto-new.svg" alt="">
+                </mat-card-title>
+                <mat-card-subtitle>لطفا جهت ثبت نام اطلاعات خود را وارد نمایید</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                       <!-- Angular Material form -->
+                        <form [formGroup]="registrationForm"  (submit)="register()" #registerForm="ngForm">
+                            <!-- Mobile number input field -->
+                         
+                        <mat-form-field appearance="outline">
+                            <mat-label>تلفن همراه</mat-label>
+                            <input matInput placeholder="تلفن همراه" type="text" formControlName="phoneNumber" required >
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                          </mat-form-field>
+                            <!-- First name input field -->
+                            <mat-form-field appearance="outline">
+                                <mat-label> نام</mat-label>
+                                <input matInput placeholder="نام" type="text" formControlName="firstName" required >
+                                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                              </mat-form-field>
+                            <!-- Last name input field -->
+                            <mat-form-field appearance="outline">
+                                <mat-label>نام خانوادگی"</mat-label>
+                                <input matInput placeholder=" نام خانوادگی" type="text" formControlName="lastName" required >
+                                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                              </mat-form-field>
+                            <!-- Acquaintance selection -->
+                        
+                            <!-- Submit button -->
+                            <button mat-raised-button color="primary">
+                                <span >ثبت نام</span>
+                                <!-- <mat-spinner ></mat-spinner> -->
+                            </button>
+                        </form>
+                    </div>
+               
+            
+            </mat-card-content>
+        </mat-card>
+    <div class="col-md-3"></div>
+</div>
+

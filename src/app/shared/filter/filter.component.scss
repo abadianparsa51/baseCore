@@ -1,0 +1,49 @@
+.filter-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: transparent;
+    /* Adjust background color as needed */
+    border-bottom: 1px solid #eaeaea;
+    /* Add border as needed */
+    color: #5E5E5E !important;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.filter-name {
+    margin-right: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    /* Adjust spacing between name and icon */
+}
+
+.sort {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.filter-icon {
+    font-size: 20px;
+    /* Adjust icon size as needed */
+}
+
+.sorting-buttons {
+    margin-left: 15px;
+    margin-bottom: 5px;
+    /* Adjust spacing between buttons */
+}
+
+.custom-icon {
+    filter: invert(84%) sepia(123%) saturate(2397%) hue-rotate(172deg) brightness(87%) contrast(88%)
+}
+
+.horizantal-scrolling {
+    margin-bottom: -20px !important;
+}

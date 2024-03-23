@@ -1,0 +1,94 @@
+@import '../../theme/conf';
+.card {
+    width: auto;
+    height: auto;
+    background: $card-bg;
+    position: relative;
+    border: 1px solid $card-border;
+    border-radius: 2px;
+    color: $fonts-color;
+    margin-bottom: 10px;
+    // @media screen and(max-width:700px) {
+    //     min-height: 100vh;
+    // }
+}
+
+.card-block {
+    display: block;
+    padding: 10px;
+}
+.card-header {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between; 
+    border-bottom:0;
+    background: $card-bg;
+        margin-bottom: 5px;
+        .card-title {
+        display: inline-block;
+        margin: 0;
+        line-height: 40px;
+        font-size: $default-text+1;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 8px;
+        i{
+          font-size: $sm-text;
+        }
+    }
+}
+h4{
+    font-size: $default-text+1;
+    i{
+        font-size: $sm-text;
+    }
+}
+.collapse-btn {
+    position: relative;
+    right: 0;
+    top: 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    @include center(30px, 30px);
+    font-size: $lg-text;
+    color: rgba($fonts-color, .5);
+    letter-spacing: -$lg-text;
+    &:hover {
+        color: $primary;
+    }
+}
+
+.collapse-off {
+    @include transition(all .5s);
+    @include transform(scale(0));
+    width: 0;
+    display: none
+}
+
+.collapse-on {
+    @include transition(all .5s);
+    @include transform(scale(1));
+    display: block;
+}
+
+.content-wrap {
+    height: auto;
+}
+
+.card-content {
+    padding: 10px;
+    height: auto;
+}
+
+.card-footer {
+    width: 100%;
+    height: auto;
+    min-height: 45px;
+    line-height: 45px;
+    border: none;
+    border-top: 1px solid $border-color;
+    padding: 0 10px;
+}

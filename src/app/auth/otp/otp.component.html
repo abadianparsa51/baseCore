@@ -1,0 +1,38 @@
+<div class="row mt50">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <h3>Login</h3>
+            </mat-card-header>
+            <mat-card-content  dir="ltr">
+              <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="conf"></ng-otp-input>
+              <button class="btn-login" (click)="login()" [disabled]="!disableButton" mat-raised-button color="primary" type="submit" >
+                
+                Login</button>
+            </mat-card-content>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <a (click)="password()">
+                            <span *ngIf="!showloading.otp"> ورود با رمز عبور</span>
+                            <i *ngIf="showloading.otp" class="fas fa-spinner-third fa-spin"></i>
+                        </a>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <span *ngIf="timer>0">
+                            {{timer}}
+                        </span>
+                        <a (click)="resetTimer()" *ngIf="timer == 0">
+                
+                            <span *ngIf="!showloading.otp">ارسال مجدد</span>
+                            <i *ngIf="showloading.otp" class="fas fa-spinner-third fa-spin"></i>
+                        </a>
+                    </div>
+                </div>
+            
+          </mat-card>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+  

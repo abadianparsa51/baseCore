@@ -1,0 +1,50 @@
+mat-icon {
+    color: rgb(159, 159, 159);
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+    /* Adjust the background color as needed */
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add a shadow for a better look */
+}
+
+.header-left,
+.header-right {
+    flex: 0 0 auto;
+    /* Prevent these elements from growing */
+}
+
+.header-center {
+    flex: 1;
+    /* Allow the title to take up remaining space */
+    text-align: center;
+}
+
+.header-button {
+    background-color: #007bff;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    background-color: #0056b3;
+    /* Button background color on hover */
+}
+
+.header-title {
+    font-size: 18px;
+    /* Adjust the font size of the title */
+    font-weight: bold;
+    /* Make the title bold */
+}

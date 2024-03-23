@@ -1,0 +1,155 @@
+body {
+    font-family: $default-font;
+    font-size: 13px;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 0;
+    scrollbar-color: rgba($scrollbar-bg, .1) transparent;
+    scrollbar-width: thin !important;
+    font-weight: 300 !important;
+    background: $page-body-bg;
+
+
+}
+
+div,
+p,
+span,
+a,
+button,
+ul,
+li,
+ol,
+i {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    cursor: pointer !important;
+    color: $fonts-color;
+    text-decoration: none !important;
+
+    &:hover {
+        color: inherit;
+    }
+
+    &.underline {
+        text-decoration: underline !important;
+    }
+}
+
+.bg-card {
+    background-color: $card-bg;
+}
+
+h1 {
+    font-size: 16px;
+}
+
+ol,
+ul {
+    padding: 1rem;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.flex-gap-1 {
+    gap: .5rem;
+}
+
+.flex-gap-2 {
+    gap: 1rem;
+}
+
+.flex-gap-3 {
+    gap: 1.5rem;
+}
+
+.flex-gap-4 {
+    gap: 2rem;
+}
+
+
+.swal2-confirm {
+    background-color: $primary !important;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba($fonts-color, .4);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $default-font;
+}
+
+.scrollY {
+    overflow-y: auto;
+    scrollbar-color: rgba($scrollbar-bg, .3) transparent;
+    scrollbar-width: thin !important;
+    ::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgba($fonts-color, .4);
+    }
+}
+
+.scrollY-0 {
+    overflow-y: auto;
+    scrollbar-color: rgba($scrollbar-bg, .1) transparent;
+    scrollbar-width: none !important;
+
+    ::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0 !important;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0 !important;
+        background-color: rgba($fonts-color, .4);
+    }
+}

@@ -1,0 +1,195 @@
+mat-card {
+     border-radius: 2px;
+
+     img {
+          border: 1px solid white;
+          padding: 1px;
+     }
+
+     .example-chip {
+          background-color: transparent !important;
+          border: 1px solid silver;
+     }
+
+     mat-card-title {
+          color: white;
+
+          .typcn-spanner {
+               font-size: 14px;
+               font-weight: 700;
+               line-height: 20px;
+          }
+
+          margin-right: -5px !important;
+     }
+
+     mat-card-subtitle {
+          font-size: 10px;
+          margin-right: -4px !important;
+          position: relative;
+          color: white;
+
+          .categoryType {
+               font-weight: 700px;
+               font-size: 12px;
+               line-height: 18px;
+               margin-top: 7px;
+          }
+
+          .online {
+               font-weight: 700;
+               font-size: 10px;
+               line-height: 16px;
+          }
+
+          .statusBadge {
+               margin-top: 30px !important;
+               margin-right: -38px !important;
+               position: absolute;
+               right: 37px;
+
+               span {
+                    margin-top: 10px;
+               }
+          }
+     }
+
+     mat-card-header {
+          border-radius: 2px;
+          background-image: url('../../../assets/img/28c0c49d5b2ab6914a0e84f9781fd961.jfif');
+          background-size: cover;
+          background-position: center;
+          height: auto;
+          width: 100%;
+          padding: 10px;
+     }
+
+     mat-card-subtitle {
+          display: flex;
+          margin-top: -10px;
+     }
+
+     mat-chip {
+          justify-content: space-around;
+
+          img {
+               border: none;
+               width: 15px;
+               height: 15px;
+               margin-left: 5px;
+          }
+
+          span {
+               color: rgb(117, 117, 117);
+               font-weight: 100;
+               font-size: 10px;
+
+          }
+     }
+
+     mat-card-content {
+          .city {
+               margin-right: 10px;
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               align-items: center;
+
+               span {
+                    font-weight: 700;
+                    font-size: 12px;
+               }
+          }
+
+          .category {
+               margin-right: 10px;
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               align-items: center;
+
+               span {
+                    font-weight: 700;
+                    font-size: 12px;
+               }
+          }
+
+          .price {
+               margin-top: 5px;
+               margin-right: 10px;
+               display: flex;
+               flex-direction: row;
+               justify-content: space-between;
+               align-items: center;
+
+               span {
+                    font-weight: 700;
+                    font-size: 12px;
+               }
+          }
+     }
+}
+
+
+.mat-mdc-card-title-group {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     margin-right: 10px;
+     margin-top: -9px;
+}
+
+.mat-badge-content {
+     position: absolute;
+     background: green;
+     width: 7px;
+     height: 7px;
+     text-align: center;
+     align-items: center;
+     padding: 0;
+     top: 0px;
+}
+
+.mat-badge.hide-text .mat-badge-content {
+     color: transparent;
+}
+
+.mat-mdc-card-md-image {
+     aspect-ratio: 1/0;
+     width: 66px !important;
+     height: 66px !important;
+}
+
+.fff {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.star-chip {
+
+     background-color: white !important;
+}
+
+.starRating {
+     color: black !important;
+     font-weight: 400 !important;
+     font-size: 10px !important;
+     line-height: 16px;
+}
+
+.custom-button {
+     width: 100%;
+     padding: 19px !important;
+     background-color: black !important;
+     color: white !important;
+
+     span {
+          font-weight: 500 !important;
+          font-size: 10px !important;
+          line-height: 14px !important;
+          font-family: Yekan, sans-serif !important;
+     }
+
+}
