@@ -1,0 +1,81 @@
+<ng-container *ngFor="let card of cardData" >
+  <mat-card class="example-card mt-2" (click)="onCardClicked(card.id)" >
+    <mat-card-header>
+      <div>{{ card.id }}</div> 
+      <img mat-card-md-image [src]="card.imageUrl" [alt]="card.altText">
+      <mat-card-title-group>
+        <mat-card-title>
+          <span class="typcn typcn typcn-spanner">{{ card.name }}</span>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <span class="categoryType">{{ card.subtitle }}</span>
+          <div class="statusBadge">
+            <span class="online">{{ card.status}}</span>
+            <span matBadge="&#8288;" matBadgeSize="small" [matBadgeColor]="card.status ? 'primary' : 'warn'"
+              *ngIf="card.status"></span>
+            <span matBadge="&#8288;" matBadgeSize="small" [matBadgeColor]="card.status ? 'warn' : 'primary'"
+              *ngIf="!card.status"></span>
+          </div>
+        </mat-card-subtitle>
+        <mat-chip-set aria-label="Dog selection">
+          <div class="fff">
+            <mat-chip class="star-chip">
+              <img src="../../../assets/img/star.svg" alt="" />
+              <span class="starRating">{{ card.starRating }}</span>
+            </mat-chip>
+            <span class="mt12">{{ card.city }}</span>
+          </div>
+        </mat-chip-set>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="city">
+        <span class="">
+          شهر :
+        </span>
+        <span>
+          <mat-chip-set>
+            <mat-chip class="example-chip">
+              <span>
+                {{ card.city }}
+              </span>
+            </mat-chip>
+            <mat-chip class="example-chip">
+              <span>
+                +{{ card.cityRating }}
+              </span>
+            </mat-chip>
+          </mat-chip-set>
+        </span>
+      </div>
+      <div class="category">
+        <span>سبک عکاسی:</span>
+        <span>
+          <mat-chip-set>
+            <mat-chip class="example-chip">
+              <span>
+                {{ card.category }}
+              </span>
+            </mat-chip>
+            <mat-chip class="example-chip">
+              <span>
+                +{{ card.categoryRating }}
+              </span>
+            </mat-chip>
+          </mat-chip-set>
+        </span>
+      </div>
+      <div class="price">
+        <span>قیمت هر شات:</span>
+        <span>{{ card.price }}
+          <span class="tomanColor"> تومان</span>
+        </span>
+      </div>
+    </mat-card-content>
+    <div class="p-9">
+      <button mat-flat-button class="custom-button" (click)="order()">
+        <span>سفارش</span>
+      </button>
+    </div>
+  </mat-card>
+</ng-container>

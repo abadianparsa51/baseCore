@@ -3,14 +3,17 @@
 @import 'bootstrap/scss/bootstrap';
 
 html,
-body {
-    height: 100%;
-}
 
 body {
-    margin: 0;
+    height: 100% !important;
     font-family: Yekan, sans-serif !important;
     font-size: 12px;
+}
+h2{
+    font-family: Yekan, sans-serif !important;
+    font-weight: 700 !important;
+    line-height: 18px !important;
+    margin: 0 5px 10px !important;
 }
 
 span {
@@ -76,11 +79,72 @@ span {
 .mt65 {
     margin-top: 65px !important;
 }
+.ml5{
+    margin-left: 5px !important;
+}
+.ml10{
+    margin-left: 10px !important;
+}
+.ml18{
+    margin-left: 18px !important;
+}
+.mr5{
+    margin-right: 5px !important;
+}
+.mr10{
+    margin-right: 10px !important;
+}
+.ml5{
+    margin-left: 5px !important;
+}
+.mr5{
+    margin-right: 5px !important;
+}
 
 .p-9 {
     padding: 9px !important;
 }
+.pl9{
+    padding-left: 9px !important;
+}
 
+.pl12{
+    padding-left: 12px !important;
+}
+.pr9{
+    padding-right: 9px !important;
+}
+.pr12{
+    padding-right: 12px !important;
+}
+.mdc-tab__text-label{
+    font-family: Yekan, sans-serif !important;
+    color: black !important;
+    font-weight: 700;
+    font-size: 12px !important;
+}
+.mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
+    --mdc-tab-indicator-active-indicator-color: #3f51b5;
+    --mat-tab-header-disabled-ripple-color: rgba(0, 0, 0, 0.38);
+    --mat-tab-header-pagination-icon-color: #000;
+    --mat-tab-header-inactive-label-text-color: rgba(0, 0, 0, 0.6);
+    --mat-tab-header-active-label-text-color: #3f51b5;
+     --mat-tab-header-active-ripple-color:unset !important ; 
+    --mat-tab-header-inactive-ripple-color: #3f51b5;
+    --mat-tab-header-inactive-focus-label-text-color: rgba(0, 0, 0, 0.6);
+    --mat-tab-header-inactive-hover-label-text-color: rgba(0, 0, 0, 0.6);
+    --mat-tab-header-active-focus-label-text-color: #3f51b5;
+    --mat-tab-header-active-hover-label-text-color: #3f51b5;
+    --mat-tab-header-active-focus-indicator-color: #3f51b5;
+    --mat-tab-header-active-hover-indicator-color: #3f51b5;
+}
+.mat-mdc-tab{
+    letter-spacing: unset !important;
+
+}
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+    border: 2px solid black !important;
+}
 .mat-mdc-chip-set .mdc-evolution-chip-set__chips {
     margin-top: 5px;
     overflow: auto !important;
@@ -88,6 +152,9 @@ span {
     white-space: nowrap !important;
     display: inline-block !important;
 
+}
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+     border-top-width: unset !important ;
 }
 
 ::-webkit-scrollbar {
@@ -102,4 +169,145 @@ span {
 /*thumb*/
 ::-webkit-scrollbar-thumb {
     background: transparent;
+}
+.transparent-background {
+    background-color: transparent;
+}
+
+.mat-mdc-tab-labels{
+    margin-top: 5px;
+    overflow: auto !important;
+    white-space: nowrap !important;
+    width: 100% ;
+}
+.mdc-linear-progress__bar-inner {
+    border-top-width: var(--mdc-linear-progress-active-indicator-height);
+    border-bottom-left-radius: 19px !important;
+    border-top-left-radius: 19px !important;
+    border-bottom-right-radius: 19px !important;
+    border-top-right-radius: 19px !important;
+}
+.mat-mdc-tab-body-wrapper{}
+.mat-mdc-tab-body{}
+
+/* Default styles */
+
+/* Media queries for different screen sizes */
+@media only screen and (min-width: 360px) and (max-width : 375px) {
+    /* Styles for small screens (e.g., mobile phones) */
+    .mat-mdc-tab-labels {
+        width: 65% !important; 
+    }
+    .mat-mdc-tab-body-wrapper{
+        width: 68% !important;
+    }
+    // .mat-mdc-tab-body{
+    //     position: absolute !important;
+    // }
+}
+app-gallery{
+    z-index: 10000 !important;
+  }
+@media only screen and (min-width: 377px) and (max-width: 400px) {
+    /* Styles for medium screens (e.g., tablets) */
+    .mat-mdc-tab-labels {
+        width: 70% !important; /* Adjust width for tablets */
+    }
+    .mat-mdc-tab-body-wrapper{
+        width: 75% !important;
+    }
+}
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+    /* Styles for medium screens (e.g., tablets) */
+    .mat-mdc-tab-labels {
+        width: 80% !important; /* Adjust width for tablets */
+    }
+    .mat-mdc-tab-body-wrapper{
+        width: 85% !important;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 550px) {
+    /* Styles for large screens (e.g., laptops) */
+    .mat-mdc-tab-labels {
+        width: 80% !important; /* Adjust width for laptops */
+    }
+}
+@media only screen and (min-width: 551px) and (max-width: 600px) {
+    /* Styles for large screens (e.g., laptops) */
+    .mat-mdc-tab-labels {
+        width: 100% !important; /* Adjust width for laptops */
+    }
+    .cdk-virtual-scroll-content-wrapper{
+        width: 100% !important;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 700px) {
+    /* Styles for large screens (e.g., laptops) */
+    .mat-mdc-tab-labels {
+        width: 100% !important; /* Adjust width for laptops */
+    }
+    .cdk-virtual-scroll-content-wrapper{
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 701px) {
+    /* Styles for extra large screens (e.g., large desktops) */
+    .mat-mdc-tab-labels {
+        width: 100% !important; /* Adjust width for large desktops */
+    }
+    .cdk-virtual-scroll-content-wrapper{
+        width: 100% !important;
+    }
+}
+
+.mat-mdc-tab-body.mat-mdc-tab-body-active {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+     z-index: 0 !important; 
+    flex-grow: 1;
+    width: 99% !important;
+}
+.mdc-tab {
+     padding-right: 0px !important;
+    padding-left: 0px !important;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+    outline: none;
+    text-align: center;
+    /* white-space: nowrap; */
+    cursor: pointer;
+    -webkit-appearance: none;
+    // z-index: 1;
+}
+.mat-mdc-tab-body {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     position: unset !important; 
+    display: block;
+    overflow: hidden;
+    outline: 0;
+     flex-basis: 0% !important; 
+}
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: #BEC6FF !important;
+    --mdc-linear-progress-track-color: #F1F3FF !important;
+}
+[dir=rtl] .mat-mdc-standard-chip .mdc-evolution-chip__action--primary, .mat-mdc-standard-chip .mdc-evolution-chip__action--primary[dir=rtl] {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+.mat-mdc-standard-chip .mdc-evolution-chip__action--primary {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
 }

@@ -1,0 +1,23 @@
+<div class="service-provider-container">
+<app-provider-profile-header></app-provider-profile-header>
+<div class="text-center">
+     <app-service-provider-job-informations></app-service-provider-job-informations>
+</div>
+</div>
+
+
+<cdk-virtual-scroll-viewport class="viewport" itemSize="90" orientation="horizontal" 
+style="height:500px; overflow-y: scroll !important;">
+  <mat-tab-group mat-stretch-tabs (selectedTabChange)="onTabChange($event)">
+    <mat-tab [class.active]="item.isActive" *cdkVirtualFor="let item of items; let i = index" [label]="item.label">
+      <div class="tab-content">
+        
+        <ng-container *ngIf="selectedTab === item.label">
+          <app-gallery #gallery [serviceProviderProfile]="serviceProviderProfileModel"
+           *ngIf="selectedTab === 'نمونه کارها'" style="  z-index: 10000 !important;"></app-gallery>
+          <app-service-provider-specifications *ngIf="selectedTab === 'مشخصات'"></app-service-provider-specifications>
+        </ng-container>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</cdk-virtual-scroll-viewport>

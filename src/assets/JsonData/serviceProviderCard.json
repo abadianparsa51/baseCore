@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "imageUrl": "/src/assets/img/spCardBg.jpg",
+    "altText": "Alt Text",
+    "name": "John Doe",
+    "subtitle": "Editor",
+    "status": "Online",
+    "starRating": 4.5,
+    "city": "New York",
+    "cityRating": 8,
+    "category": "Photography",
+    "categoryRating": 7,
+    "price": 50000
+  },
+  {
+    "id": "2",
+    "imageUrl": "/src/assets/img/spCardBg.jpg",
+    "altText": "Alt Text",
+    "name": "Alice Smith",
+    "subtitle": "Photographer",
+    "status": "Offline",
+    "starRating": 4.0,
+    "city": "Los Angeles",
+    "cityRating": 9,
+    "category": "Portrait",
+    "categoryRating": 8,
+    "price": 60000
+  },
+  {
+    "id": "3",
+    "imageUrl": "/src/assets/img/spCardBg.jpg",
+    "altText": "Alt Text",
+    "name": "Bob Johnson",
+    "subtitle": "Designer",
+    "status": "Online",
+    "starRating": 4.2,
+    "city": "San Francisco",
+    "cityRating": 7,
+    "category": "Landscape",
+    "categoryRating": 6,
+    "price": 55000
+  }
+]

@@ -1,0 +1,25 @@
+.gallery-img {
+     width: 100%;
+     height: auto;
+     display: block;
+     border-radius: 8px;
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+   }
+   .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) {
+     background-color: #e0e0e000;
+     border: 1px solid #878A95;
+ }
+ .selected{
+ background-color: black !important;
+  /* Change text color to white */
+     span{
+         color: white !important;
+     }
+ }
+ 
+ ::ng-deep .example-box.selected .mat-chip-text {
+     color: white !important; /* Change text color to white */
+ }
+ .horizantal-scrolling {
+    //  margin-bottom: -3% !important;
+ }

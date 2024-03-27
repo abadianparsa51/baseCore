@@ -13,7 +13,7 @@
 .filter {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     margin-right: 5px;
 }
 
@@ -36,7 +36,7 @@
 
 .sorting-buttons {
     margin-left: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     /* Adjust spacing between buttons */
 }
 
@@ -45,5 +45,41 @@
 }
 
 .horizantal-scrolling {
-    margin-bottom: -20px !important;
+    // margin-bottom: -6% !important;
+}
+.search-section{
+    padding: 10px !important;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #EBEBEB;
+    margin-top: 58px;
+    margin-left: 10px;
+    margin-right: 10px;
+    input{
+        border: none;
+        width: 100%;
+        background-color: transparent;
+        margin-right: 5px;
+    }
+    input:focus{
+        outline: none;
+    }
+}
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) {
+    background-color: #e0e0e000;
+    border: 1px solid #878A95;
+}
+.selected{
+background-color: black !important;
+ /* Change text color to white */
+    span{
+        color: white !important;
+    }
+}
+
+::ng-deep .example-box.selected .mat-chip-text {
+    color: white !important; /* Change text color to white */
 }

@@ -23,7 +23,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatSliderModule } from '@angular/material/slider'
+import { MatSliderModule } from '@angular/material/slider';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 import {
   MatDialog,
   MAT_DIALOG_DATA,
@@ -38,6 +41,7 @@ import {
   imports: [
     CommonModule,
     MatMenuModule,
+    MatGridListModule,
     MatToolbarModule,
     MatSliderModule,
     MatIconModule,
@@ -65,11 +69,14 @@ import {
     MatInputModule,
     FormsModule,
     MatButtonModule,
+    ScrollingModule,
   ],
   exports: [
     MatToolbarModule,
+    ScrollingModule,
     MatIconModule,
     MatMenuModule,
+    MatGridListModule,
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,

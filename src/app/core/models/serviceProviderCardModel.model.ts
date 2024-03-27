@@ -1,11 +1,12 @@
 import { OnlineStatus } from "../enum/onlineStatus";
 
-export interface CardData {
+export interface ServiceProviderCardModel {
+  id: string;
   imageUrl: string;
   altText: string;
   name: string;
   subtitle: string;
-  online: OnlineStatus;
+  status: OnlineStatus;
   starRating: number;
   city: string;
   cityRating: number;

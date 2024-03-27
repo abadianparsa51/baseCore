@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CardData } from '../../core/models/serviceProviderCard';
+import { ServiceProviderCardModel } from '../../core/models/serviceProviderCardModel.model';
 
 @Component({
   selector: 'app-desktop-layout',
@@ -7,7 +7,7 @@ import { CardData } from '../../core/models/serviceProviderCard';
   styleUrls: ['./desktop-layout.component.scss']
 })
 export class DesktopLayoutComponent {
-  CardData: CardData[] = []
+  // CardData: CardData[] = []
   pageTitle!: 'متحصیصن';
 
 }

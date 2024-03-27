@@ -1,0 +1,93 @@
+
+.experience-box-container{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-evenly;
+     margin-left: 10px;
+
+.experience-box{
+     border: 1px solid #A1ABFF;
+     border-radius: 2px;
+     margin-bottom: 13px;
+     background-color: transparent !important;
+     span{
+ 
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+     }
+     .experience{
+          padding: 20px !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          span{
+               color:#A3A3A3;
+               font-weight: 500;
+               font-size: 12px;
+               line-height: 18px;
+          }
+          .years-of-expreience{
+               color:black;
+               font-weight: 500;
+               font-size: 14px;
+               line-height: 20px;
+          }
+     }
+     .project{
+          padding: 20px  !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          span{
+               color:black;
+               font-weight: 500;
+               font-size: 14px;
+               line-height: 20px;
+          }
+          .haveProject{
+               color:#A3A3A3;
+               font-weight: 500;
+               font-size: 12px;
+               line-height: 18px;
+          }
+     }
+     .score{
+          padding: 20px  !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          }
+          .number-of-points{
+               color:black;
+               font-weight: 500;
+               font-size: 14px;
+               line-height: 20px;
+          }
+          span{
+               color:#A3A3A3;
+               font-weight: 500;
+               font-size: 12px;
+               line-height: 18px;
+          }
+     }
+     }
+     .license-box-container{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 32px;
+         
+          .college{
+               border: 1px solid black;
+               // display: flex;
+               // flex-direction: column;
+               // justify-content: space-evenly;
+               // align-items: start;
+          }
+     }
