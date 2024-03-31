@@ -1,4 +1,18 @@
-<ng-container *ngFor="let card of cardData">
+<cdk-virtual-scroll-viewport class="viewport" itemSize="90" orientation="horizontal"
+  style="height:100vhpx; overflow-y: scroll !important;">
+  <mat-tab-group mat-stretch-tabs (selectedTabChange)="onTabChange($event)">
+    <mat-tab [class.active]="item.isActive" *cdkVirtualFor="let item of items; let i = index" [label]="item.label">
+      <div class="tab-content">
+
+        <ng-container *ngIf="selectedTab === item.label">
+          1
+        </ng-container>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</cdk-virtual-scroll-viewport>
+
+<!-- <ng-container *ngFor="let card of cardData">
   <mat-card class="example-card mt-2" (click)="onCardClicked(card.id)">
     <mat-card-header>
       <div>{{ card.id }}</div>
@@ -78,4 +92,4 @@
       </button>
     </div>
   </mat-card>
-</ng-container>
+</ng-container> -->
