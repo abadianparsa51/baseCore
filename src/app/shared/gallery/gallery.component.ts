@@ -13,7 +13,7 @@ export interface Tile {
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  @Input()serviceProviderProfile:ServiceProviderModel[]=[];
+  @Input() serviceProviderProfile: ServiceProviderModel[] = [];
   tiles: any[] = [];
 
   constructor(private serviceProviderProfileService: ServiceProviderProfileService) { }
@@ -24,6 +24,8 @@ export class GalleryComponent implements OnInit {
     { name: 'Lettuce' },
     { name: 'Broccoli' },
     { name: 'Lettuce' },
+    { name: 'Lettuce' },
+
   ];
   selectedVegetables: any[] = []; // Array to store selected vegetables
   ngOnInit(): void {

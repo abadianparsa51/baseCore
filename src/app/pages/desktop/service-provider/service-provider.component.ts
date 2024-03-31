@@ -6,7 +6,7 @@ import { ServiceProviderModel } from 'src/app/core/models/serviceProviderModel.m
 import { ServiceProviderProfileService } from 'src/app/services/service-provider-profile.service';
 import { GalleryComponent } from 'src/app/shared/gallery/gallery.component';
 import { ServiceProviderJobInformationsComponent } from 'src/app/shared/service-provider-job-informations/service-provider-job-informations.component';
-import {ServiceProviderSpecialtiesComponent} from 'src/app/shared/service-provider-specialties/service-provider-specialties.component'
+import { ServiceProviderSpecialtiesComponent } from 'src/app/shared/service-provider-specialties/service-provider-specialties.component'
 @Component({
   selector: 'app-service-provider',
   templateUrl: './service-provider.component.html',
@@ -16,7 +16,7 @@ export class ServiceProviderComponent implements OnInit, AfterViewInit {
   serviceProviderProfileModel: ServiceProviderModel[] = [];
   @ViewChildren('gallery') galleries!: QueryList<GalleryComponent>;
 
-  @Input()serviceProvider : ServiceProviderModel[]=[] 
+  @Input() serviceProvider: ServiceProviderModel[] = []
 
   items: { label: string, component: any }[] = [
     { label: 'نمونه کارها', component: GalleryComponent },
@@ -26,14 +26,14 @@ export class ServiceProviderComponent implements OnInit, AfterViewInit {
     { label: 'Tab 5', component: GalleryComponent },
     { label: 'Tab 6', component: GalleryComponent },
   ];
-  selectedTab: string| undefined;
-  id?: string | null;
+  selectedTab: string | undefined;
   selectedIndex: number = 0;
+  id?: string | null;
+
   constructor(
     private route: ActivatedRoute,
-    private serviceProviderProfile :ServiceProviderProfileService,) 
-  {
-    this.id='';
+    private serviceProviderProfile: ServiceProviderProfileService,) {
+    this.id = '';
   }
 
   selectTab(index: number) {
@@ -81,5 +81,5 @@ export class ServiceProviderComponent implements OnInit, AfterViewInit {
         }
       );
   }
-  
+
 }

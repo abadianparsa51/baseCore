@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ServiceProviderCardModel } from '../../core/models/serviceProviderCardModel.model'
+import { MatTabChangeEvent } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-card',
@@ -7,7 +8,7 @@ import { ServiceProviderCardModel } from '../../core/models/serviceProviderCardM
   styleUrls: ['./serviceProviderCard.component.scss']
 })
 export class serviceProviderCardComponent {
-  @Input() cardData: ServiceProviderCardModel[]=[];
+  @Input() cardData: ServiceProviderCardModel[] = [];
   @Output() cardClicked = new EventEmitter<string>();
 
   order() {

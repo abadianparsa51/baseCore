@@ -1,25 +1,135 @@
+mat-grid-list {
+
+    width: calc(100vh - 20px) !important;
+    margin-bottom: 12px !important;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 450px) {
+    mat-grid-list {
+        width: calc(100vw - 20px) !important;
+        /* Adjust as needed */
+    }
+
+
+}
+
+@media only screen and (min-width: 540px) {
+    mat-grid-list {
+        width: calc(100vw - 20px) !important;
+        /* Adjust as needed */
+    }
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    mat-grid-list {
+        width: calc(100vw - 20px) !important;
+        /* Adjust as needed */
+    }
+
+    .horizantal-scrolling {
+        margin-left: 11% !important;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    mat-grid-list {
+        width: calc(100vw - 20px) !important;
+        /* Adjust as needed */
+    }
+
+    .horizantal-scrolling {
+        margin-left: 11% !important;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    mat-grid-list {
+        width: calc(100vw - 20px) !important;
+        /* Adjust as needed */
+    }
+
+    .horizantal-scrolling {
+        margin-left: 11% !important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    mat-grid-list {
+        width: calc(100vw - 20px) !important;
+        /* Adjust as needed */
+    }
+
+    .horizantal-scrolling {
+        margin-left: 11% !important;
+    }
+}
+
+.horizantal-scrolling {
+    // margin-left: 6% !important;
+}
+
+@media only screen and (min-width:360px) {
+    .horizantal-scrolling {
+        margin-left: 10.5% !important;
+    }
+}
+
+@media only screen and (min-width:375px) {
+    .horizantal-scrolling {
+        margin-left: 6.5% !important;
+    }
+}
+
+@media only screen and (min-width:390px) {
+    .horizantal-scrolling {
+        margin-left: 11.5% !important;
+    }
+}
+
+@media only screen and (min-width:412px) {
+    .horizantal-scrolling {
+        margin-left: 16.5% !important;
+    }
+}
+
+@media only screen and (min-width:430px) {
+    .horizantal-scrolling {
+        margin-left: 12.5% !important;
+    }
+}
+
 .gallery-img {
-     width: 100%;
-     height: auto;
-     display: block;
-     border-radius: 8px;
-     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-   }
-   .mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) {
-     background-color: #e0e0e000;
-     border: 1px solid #878A95;
- }
- .selected{
- background-color: black !important;
-  /* Change text color to white */
-     span{
-         color: white !important;
-     }
- }
- 
- ::ng-deep .example-box.selected .mat-chip-text {
-     color: white !important; /* Change text color to white */
- }
- .horizantal-scrolling {
-    //  margin-bottom: -3% !important;
- }
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) {
+    background-color: #e0e0e000;
+    border: 1px solid #878A95;
+}
+
+.selected {
+    background-color: black !important;
+
+    /* Change text color to white */
+    span {
+        color: white !important;
+    }
+}
+
+::ng-deep .example-box.selected .mat-chip-text {
+    color: white !important;
+    /* Change text color to white */
+}

@@ -1,10 +1,10 @@
 // :host {
 //   --viewport-height: calc(100vh - 200px);
 // }
-.service-provider-container{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
+.service-provider-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .viewport {
@@ -13,32 +13,40 @@
   // border: 1px solid black;
   overflow: hidden !important;
   white-space: nowrap !important;
-  
+
 
 }
-.cdk-virtual-scroll-content-wrapper{
-width: 100% !important;
+
+.cdk-virtual-scroll-content-wrapper {
+  width: 100% !important;
 }
-cdk-virtual-scroll-viewport{
+
+cdk-virtual-scroll-viewport {
   height: 500px;
 }
+
 .mat-mdc-tab-body {
-  position: relative; /* or absolute or fixed */
+  position: relative;
+  /* or absolute or fixed */
   /* other styles */
   z-index: 1;
 }
+
 .item {
-  height: 50px;  /* Set the height of each item */
-  line-height: 50px; /* Center text vertically within each item */
-  text-align: center; /* Center text horizontally within each item */
-  border-bottom: 1px solid #ddd; 
+  height: 50px;
+  /* Set the height of each item */
+  line-height: 50px;
+  /* Center text vertically within each item */
+  text-align: center;
+  /* Center text horizontally within each item */
+  border-bottom: 1px solid #ddd;
 }
+
 .tab-content {
-  margin-left: 10px;
+  margin-left: 0px;
   margin-right: 0px;
   overflow: hidden !important;
   padding: 0px;
   // background-color: #f0f0f0;
-  // border: 1px solid #ddd;
+  // border-top: 1px solid #ddd;
 }
-
