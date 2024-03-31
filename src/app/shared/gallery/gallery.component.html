@@ -1,0 +1,13 @@
+<div class="horizantal-scrolling " style="">
+  <mat-chip-set>
+    <mat-chip *ngFor="let vegetable of vegetables" class="example-box" [ngClass]="{ 'selected': isSelected(vegetable) }"
+      (click)="toggleSelection(vegetable)">
+      <span>{{ vegetable.name }}</span>
+    </mat-chip>
+  </mat-chip-set>
+</div>
+<mat-grid-list cols="4" rowHeight="200px" gutterSize="12px" class="ml5 mr5 mt10">
+  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+    <img [src]="tile.src" alt="Image" style="width: 100%; height: 100%;">
+  </mat-grid-tile>
+</mat-grid-list>

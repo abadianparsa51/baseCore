@@ -1,0 +1,54 @@
+[
+     {
+       "id": "1",
+       "name": "John",
+       "lastName": "Doe",
+       "imgProfile": "profile1.jpg",
+       "onlineStatus": "Online",
+       "speciality": "عکاس",
+       "jobInformation": {
+         "yearsOfExperience": 5,
+         "hasAtelier": true,
+         "starRating": 4.5
+       },
+       "workSamples": {
+         "images": ["img1.jpg", "img2.jpg", "img3.jpg"],
+         "videos": ["video1.mp4", "video2.mp4"]
+       }
+     },
+     {
+       "id": "2",
+       "name": "Alice",
+       "lastName": "Smith",
+       "imgProfile": "profile2.jpg",
+       "onlineStatus": "Offline",
+       "speciality": "فیلمبردار",
+       "jobInformation": {
+         "yearsOfExperience": 7,
+         "hasAtelier": false,
+         "starRating": 4.2
+       },
+       "workSamples": {
+         "images": ["img4.jpg", "img5.jpg"],
+         "videos": ["video3.mp4"]
+       }
+     },
+     {
+       "id": "3",
+       "name": "Bob",
+       "lastName": "Johnson",
+       "imgProfile": "profile3.jpg",
+       "onlineStatus": "Online",
+       "speciality": "ایدیتور",
+       "jobInformation": {
+         "yearsOfExperience": 3,
+         "hasAtelier": true,
+         "starRating": 4.7
+       },
+       "workSamples": {
+         "images": ["img6.jpg", "img7.jpg"],
+         "videos": []
+       }
+     }
+   ]
+   

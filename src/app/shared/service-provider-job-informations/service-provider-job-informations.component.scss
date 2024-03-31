@@ -1,0 +1,64 @@
+.job-information-box-container {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     margin-left: 10px;
+     margin-right: 10px;
+     border: 1px solid #D3D8FF;
+     border-radius: 2px;
+     padding: 3%;
+     margin-bottom: 3%;
+
+     span {
+          font-weight: 500;
+          size: 14px;
+          line-height: 20px;
+     }
+
+}
+
+.job-information-box {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-evenly;
+}
+
+.experience-box-container {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     // margin-left: 10px;
+     margin-right: 10px;
+     // border: 1px solid #D3D8FF;
+     // border-radius: 2px;
+     // padding: 3%;
+     margin-bottom: 3%;
+
+     .experience-box {
+          border: 1px solid #D3D8FF;
+          border-radius: 2px;
+          margin-bottom: 13px;
+          background-color: #F1F3FF !important;
+
+          span {
+               font-weight: 500;
+               font-size: 12px;
+               line-height: 18px;
+          }
+
+          .experience {
+               padding: 18px !important;
+          }
+
+          .atelier {
+               padding: 18px !important;
+          }
+
+          .star {
+               padding: 18px !important;
+          }
+     }
+}

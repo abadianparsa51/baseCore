@@ -1,6 +1,5 @@
 mat-icon {
     color: rgb(159, 159, 159);
-
 }
 
 .header {
@@ -8,10 +7,19 @@ mat-icon {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust as needed */
+    z-index: 1000;
+}
+
+.transparent-bg {
     background-color: transparent;
-    /* Adjust the background color as needed */
-    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Add a shadow for a better look */
+}
+
+.white-bg {
+    background-color: white;
 }
 
 .header-left,

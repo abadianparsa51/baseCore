@@ -1,4 +1,4 @@
 export enum OnlineStatus {
-    Online = 'online',
-    Offline = 'offline'
+    Online = 'انلاین',
+    Offline = 'افلاین'
 }

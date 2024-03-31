@@ -1,5 +1,8 @@
 mat-card {
      border-radius: 2px;
+     margin-left: 7px;
+     margin-right: 7px;
+     margin-bottom: 5px;
 
      img {
           border: 1px solid white;
@@ -130,6 +133,12 @@ mat-card {
      }
 }
 
+@media only screen and (min-width:360px) {
+     mat-card {
+          width: calc(100vw - 22px) !important;
+     }
+
+}
 
 .mat-mdc-card-title-group {
      display: flex;
@@ -192,4 +201,24 @@ mat-card {
           font-family: Yekan, sans-serif !important;
      }
 
+}
+
+.tomanColor {
+     color: #787878;
+     font-weight: 700;
+     font-size: 12px;
+}
+
+.mat-mdc-tab-body-wrapper {}
+
+.mat-mdc-tab-labels {}
+
+@media only screen and (min-width:360px) {
+     .mat-mdc-tab-body-wrapper {
+          width: calc(100vw - 22px) !important;
+     }
+
+     .mat-mdc-tab-labels {
+          width: calc(100vw - 22px) !important;
+     }
 }

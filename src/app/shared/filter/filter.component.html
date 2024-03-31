@@ -1,3 +1,13 @@
+<div class="search-section">
+    <div>
+        <img src="../../../assets/img/search.svg" alt="Instant Mix Icon" width="18">
+    </div>
+    <div>
+        <input type="text" placeholder="جستجو">
+
+    </div>
+</div>
+
 <div class="filter-section">
     <!-- Left side: Name filter and icon -->
     <div class="filter">
@@ -21,8 +31,13 @@
 
 
 </div>
-<div class="horizantal-scrolling" style="    margin-bottom: -20px !important;">
-    <mat-chip-set>
-        <mat-chip *ngFor="let vegetable of vegetables" class="example-box">{{ vegetable.name }}</mat-chip>
-    </mat-chip-set>
-</div>
+<!-- <div class="horizantal-scrolling">
+            <mat-chip-set>
+                <mat-chip *ngFor="let vegetable of vegetables"
+                          class="example-box"
+                          [ngClass]="{ 'selected': isSelected(vegetable) }"
+                          (click)="toggleSelection(vegetable)">
+                  <span>{{ vegetable.name }}</span>
+                </mat-chip>
+              </mat-chip-set>
+          </div> -->

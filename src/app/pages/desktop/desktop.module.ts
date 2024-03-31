@@ -2,14 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DesktopComponent } from './desktop/desktop.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './main/main.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ServiceProviderListComponent } from './service-provider-list/service-provider-list.component';
+import { ServiceProviderComponent } from './service-provider/service-provider.component';
+import { ServiceProviderSpecificationsComponent } from './service-provider-specifications/service-provider-specifications.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent
+    component: ServiceProviderListComponent
   },
+  { path: 'service-provider/:id', component: ServiceProviderComponent },
   {
     path: 'desktop',
     component: DesktopComponent
@@ -19,7 +22,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     DesktopComponent,
-    MainComponent
+    ServiceProviderListComponent,
+    ServiceProviderComponent,
+    ServiceProviderSpecificationsComponent
   ],
   imports: [
     CommonModule,
