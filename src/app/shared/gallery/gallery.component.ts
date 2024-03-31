@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatTabChangeEvent } from '@angular/material/tabs';
 import { ServiceProviderModel } from 'src/app/core/models/serviceProviderModel.model';
 import { ServiceProviderProfileService } from 'src/app/services/service-provider-profile.service';
 export interface Tile {
@@ -15,21 +16,29 @@ export interface Tile {
 export class GalleryComponent implements OnInit {
   @Input() serviceProviderProfile: ServiceProviderModel[] = [];
   tiles: any[] = [];
-
+  items: { label: string, component: any }[] = [
+    { label: 'نمونه کارها', component: GalleryComponent },
+    { label: 'مشخصات', component: GalleryComponent },
+    { label: 'Tab 3', component: GalleryComponent },
+    { label: 'Tab 4', component: GalleryComponent },
+    { label: 'Tab 5', component: GalleryComponent },
+    { label: 'Tab 6', component: GalleryComponent },
+  ];
+  selectedTab: string | undefined;
+  selectedIndex: number = 0;
+  numItems: any;
   constructor(private serviceProviderProfileService: ServiceProviderProfileService) { }
 
-  vegetables = [
-    { name: 'Carrot' },
-    { name: 'Broccoli' },
-    { name: 'Lettuce' },
-    { name: 'Broccoli' },
-    { name: 'Lettuce' },
-    { name: 'Lettuce' },
+  selectTab(index: number) {
+    this.selectedIndex = index;
+  }
 
-  ];
-  selectedVegetables: any[] = []; // Array to store selected vegetables
+  onTabChange(event: MatTabChangeEvent) {
+    this.selectedTab = this.items[event.index].label;
+  } // Array to store selected vegetables
   ngOnInit(): void {
     this.fetchServiceProviderProfileData();
+    this.numItems = this.items.length;
   }
 
   fetchServiceProviderProfileData(): void {
@@ -43,21 +52,5 @@ export class GalleryComponent implements OnInit {
       }));
     });
   }
-  isSelected(vegetable: any): boolean {
-    return this.selectedVegetables.includes(vegetable);
-  }
 
-  toggleSelection(vegetable: any): void {
-    const index = this.selectedVegetables.findIndex(v => v === vegetable);
-
-    if (index === -1) {
-      // If the vegetable is not already selected, add it to the selectedVegetables array
-      this.selectedVegetables.push(vegetable);
-    } else {
-      // If the vegetable is already selected, remove it from the selectedVegetables array
-      this.selectedVegetables.splice(index, 1);
-    }
-    this.vegetables = this.vegetables.filter(v => !this.selectedVegetables.includes(v));
-    this.vegetables.unshift(...this.selectedVegetables);
-  }
 }

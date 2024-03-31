@@ -1,28 +1,12 @@
 <app-filter></app-filter>
 <cdk-virtual-scroll-viewport class="viewport" itemSize="50" orientation="horizontal"
-    style="  overflow-y: scroll !important; ">
+    style="  overflow-y: scroll !important; " [ngClass]="{'six-or-more-items': numItems >= 6}">
     <mat-tab-group mat-stretch-tabs (selectedTabChange)="onTabChange($event)">
         <mat-tab [class.active]="item.isActive" *cdkVirtualFor="let item of items; let i = index" [label]="item.label">
             <div class="tab-content">
 
                 <ng-container *ngIf="selectedTab === item.label">
-                    <!-- <app-card [cardData]="serviceProviderCards" (cardClicked)="onCardClicked($event)"></app-card> -->
-                    <cdk-virtual-scroll-viewport class="viewport" itemSize="50" orientation="horizontal"
-                        style="  overflow-y: scroll !important; ">
-                        <mat-tab-group mat-stretch-tabs (selectedTabChange)="onTabChange($event)">
-                            <mat-tab [class.active]="item.isActive" *cdkVirtualFor="let item of items; let i = index"
-                                [label]="item.label">
-                                <div class="tab-content">
-
-                                    <ng-container *ngIf="selectedTab === item.label">
-                                        <app-card [cardData]="serviceProviderCards"
-                                            (cardClicked)="onCardClicked($event)"></app-card>
-
-                                    </ng-container>
-                                </div>
-                            </mat-tab>
-                        </mat-tab-group>
-                    </cdk-virtual-scroll-viewport>
+                    <app-card [cardData]="serviceProviderCards" (cardClicked)="onCardClicked($event)"></app-card>
 
                 </ng-container>
             </div>

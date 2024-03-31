@@ -24,12 +24,12 @@ export class ServiceProviderComponent implements OnInit, AfterViewInit {
     { label: 'Tab 3', component: GalleryComponent },
     { label: 'Tab 4', component: ServiceProviderJobInformationsComponent },
     { label: 'Tab 5', component: GalleryComponent },
-    { label: 'Tab 6', component: GalleryComponent },
+    // { label: 'Tab 6', component: GalleryComponent },
   ];
   selectedTab: string | undefined;
   selectedIndex: number = 0;
   id?: string | null;
-
+  numItems: any;
   constructor(
     private route: ActivatedRoute,
     private serviceProviderProfile: ServiceProviderProfileService,) {
@@ -50,9 +50,6 @@ export class ServiceProviderComponent implements OnInit, AfterViewInit {
       console.log(gallery); // This will log each app-gallery component instance
     });
   }
-  // getDynamicHeight(): string {
-  //   return `var(--viewport-height)`;
-  // }
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.id = params.get('id');
@@ -60,15 +57,8 @@ export class ServiceProviderComponent implements OnInit, AfterViewInit {
     // this.rndomNumber();
     this.getServiceProvidersProfile();
     // console.log(this.gallery);
+    this.numItems = this.items.length;
   }
-  vegetables = [
-    { name: 'Carrot' },
-    { name: 'Broccoli' },
-    { name: 'Lettuce' },
-    { name: 'Broccoli' },
-    { name: 'Lettuce' },
-  ];
-  selectedVegetables: any[] = [];
 
   private getServiceProvidersProfile(): void {
     this.serviceProviderProfile.getServiceProvidersProfile()

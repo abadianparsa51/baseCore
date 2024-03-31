@@ -203,6 +203,7 @@ mat-card {
 
 }
 
+
 .tomanColor {
      color: #787878;
      font-weight: 700;
@@ -213,12 +214,12 @@ mat-card {
 
 .mat-mdc-tab-labels {}
 
-@media only screen and (min-width:360px) {
-     .mat-mdc-tab-body-wrapper {
-          width: calc(100vw - 22px) !important;
-     }
+// @media only screen and (min-width:360px) {
+//      .mat-mdc-tab-body-wrapper {
+//           width: calc(100vw - 22px) !important;
+//      }
 
-     .mat-mdc-tab-labels {
-          width: calc(100vw - 22px) !important;
-     }
-}
+//      .mat-mdc-tab-labels {
+//           width: calc(100vw - 22px) !important;
+//      }
+// }
