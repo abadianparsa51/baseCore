@@ -1,111 +1,85 @@
 mat-grid-list {
 
-    width: calc(100vh - 20px) !important;
+    width: calc(100vw - 20px);
     margin-bottom: 12px !important;
 }
 
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 450px) {
-    mat-grid-list {
-        width: calc(100vw - 20px) !important;
-        /* Adjust as needed */
-    }
+
+
+:host ::ng-deep .viewport .mdc-tab {
+    /* Custom styles for .mdc-tab within the second cdk-virtual-scroll-viewport */
+    padding-right: 2px !important;
+    padding-left: 2px !important;
+    min-width: 75px !important;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 2px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: rgb(0, 0, 0) 1px solid;
+    border-radius: 50px;
+    height: 26px;
+    outline: none;
+    text-align: center;
+    /* white-space: nowrap; */
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    // z-index: 1;
+}
+
+:host ::ng-deep .viewport .mdc-tab .mdc-tab-indicator__content--underline {
+    border: none !important;
+}
+
+.viewport {
+    margin-left: 5px;
+    margin-right: 5px;
+    // border: 1px solid black;
+    overflow: hidden !important;
+    white-space: nowrap !important;
 
 
 }
 
-@media only screen and (min-width: 540px) {
-    mat-grid-list {
-        width: calc(100vw - 20px) !important;
-        /* Adjust as needed */
-    }
-
-
+.cdk-virtual-scroll-content-wrapper {
+    width: 100% !important;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    mat-grid-list {
-        width: calc(100vw - 20px) !important;
-        /* Adjust as needed */
-    }
-
-    .horizantal-scrolling {
-        margin-left: 11% !important;
-    }
+cdk-virtual-scroll-viewport {
+    height: 500px;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    mat-grid-list {
-        width: calc(100vw - 20px) !important;
-        /* Adjust as needed */
-    }
-
-    .horizantal-scrolling {
-        margin-left: 11% !important;
-    }
+.mat-mdc-tab-body {
+    position: relative;
+    /* or absolute or fixed */
+    /* other styles */
+    z-index: 1;
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    mat-grid-list {
-        width: calc(100vw - 20px) !important;
-        /* Adjust as needed */
-    }
-
-    .horizantal-scrolling {
-        margin-left: 11% !important;
-    }
+.item {
+    height: 50px;
+    /* Set the height of each item */
+    line-height: 50px;
+    /* Center text vertically within each item */
+    text-align: center;
+    /* Center text horizontally within each item */
+    border-bottom: 1px solid #ddd;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    mat-grid-list {
-        width: calc(100vw - 20px) !important;
-        /* Adjust as needed */
-    }
-
-    .horizantal-scrolling {
-        margin-left: 11% !important;
-    }
+.tab-content {
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden !important;
+    padding: 0px;
+    // background-color: #f0f0f0;
+    // border-top: 1px solid #ddd;
 }
 
-.horizantal-scrolling {
-    // margin-left: 6% !important;
-}
-
-@media only screen and (min-width:360px) {
-    .horizantal-scrolling {
-        margin-left: 10.5% !important;
-    }
-}
-
-@media only screen and (min-width:375px) {
-    .horizantal-scrolling {
-        margin-left: 6.5% !important;
-    }
-}
-
-@media only screen and (min-width:390px) {
-    .horizantal-scrolling {
-        margin-left: 11.5% !important;
-    }
-}
-
-@media only screen and (min-width:412px) {
-    .horizantal-scrolling {
-        margin-left: 16.5% !important;
-    }
-}
-
-@media only screen and (min-width:430px) {
-    .horizantal-scrolling {
-        margin-left: 12.5% !important;
-    }
-}
 
 .gallery-img {
     width: 100%;
@@ -132,4 +106,85 @@ mat-grid-list {
 ::ng-deep .example-box.selected .mat-chip-text {
     color: white !important;
     /* Change text color to white */
+}
+
+
+
+
+@media only screen and (min-width: 360px) and (max-width : 375px) {
+
+    /* Styles for small screens (e.g., mobile phones) */
+    .mat-mdc-tab-labels {
+        width: 65% !important;
+    }
+}
+
+@media only screen and (min-width: 377px) and (max-width: 400px) {
+
+    /* Styles for medium screens (e.g., tablets) */
+    .mat-mdc-tab-labels {
+        width: 100% !important;
+        /* Adjust width for tablets */
+    }
+
+    .mat-mdc-tab-body-wrapper {}
+}
+
+@media only screen and (min-width: 401px) and (max-width: 430px) {
+
+    /* Styles for medium screens (e.g., tablets) */
+    .mat-mdc-tab-labels {
+        width: 80% !important;
+        /* Adjust width for tablets */
+    }
+
+    .mat-mdc-tab-body-wrapper {}
+}
+
+@media only screen and (min-width: 451px) and (max-width: 550px) {
+
+    /* Styles for large screens (e.g., laptops) */
+    .mat-mdc-tab-labels {
+        width: 80% !important;
+        /* Adjust width for laptops */
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 600px) {
+
+    /* Styles for large screens (e.g., laptops) */
+    .mat-mdc-tab-labels {
+        width: 100% !important;
+        /* Adjust width for laptops */
+    }
+
+    .cdk-virtual-scroll-content-wrapper {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 700px) {
+
+    /* Styles for large screens (e.g., laptops) */
+    .mat-mdc-tab-labels {
+        width: 100% !important;
+        /* Adjust width for laptops */
+    }
+
+    .cdk-virtual-scroll-content-wrapper {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 701px) {
+
+    /* Styles for extra large screens (e.g., large desktops) */
+    .mat-mdc-tab-labels {
+        width: 100% !important;
+        /* Adjust width for large desktops */
+    }
+
+    .cdk-virtual-scroll-content-wrapper {
+        width: 100% !important;
+    }
 }

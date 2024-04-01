@@ -206,11 +206,73 @@ span {
     background-color: transparent;
 }
 
+
+
 .mat-mdc-tab-labels {
     margin-top: 5px;
     overflow: auto !important;
     white-space: nowrap !important;
-    width: 100%;
+    // width: calc(100vh - 20px); // Default width
+}
+
+.four-items .mat-mdc-tab-labels {
+    // Styles for when there are four items
+    width: 100% !important; // Adjust this value as needed for four items
+}
+
+.six-or-more-items .mat-mdc-tab-labels {
+    // Styles for when there are six or more items
+    width: calc(100vh - 40px) !important; // Adjust this value as needed for six or more items
+}
+
+@media only screen and (min-width: 360px) {
+
+
+    .six-or-more-items .mat-mdc-tab-labels {
+        width: calc(100vw - 5%) !important; // Adjust this value for smaller screens
+    }
+
+
+}
+
+@media only screen and (min-width: 375px) {
+
+
+    .six-or-more-items .mat-mdc-tab-labels {
+        width: calc(100vw - 4%) !important; // Adjust this value for smaller screens
+    }
+}
+
+@media only screen and (min-width: 390px) {
+
+
+    .six-or-more-items .mat-mdc-tab-labels {
+        width: calc(100vw - 4.5%) !important; // Adjust this value for smaller screens
+    }
+}
+
+@media only screen and (min-width: 412px) {
+
+
+    .six-or-more-items .mat-mdc-tab-labels {
+        width: calc(100vw - 5%) !important; // Adjust this value for smaller screens
+    }
+}
+
+@media only screen and (min-width: 414px) {
+
+
+    .six-or-more-items .mat-mdc-tab-labels {
+        width: calc(100vw - 6.5%) !important; // Adjust this value for smaller screens
+    }
+}
+
+@media only screen and (min-width: 430px) {
+
+
+    .six-or-more-items .mat-mdc-tab-labels {
+        width: calc(100vw - 7%) !important; // Adjust this value for smaller screens
+    }
 }
 
 .mdc-linear-progress__bar-inner {
@@ -228,87 +290,97 @@ span {
 /* Default styles */
 
 /* Media queries for different screen sizes */
-@media only screen and (min-width: 360px) and (max-width : 375px) {
+// @media only screen and (min-width: 360px) and (max-width : 375px) {
 
-    /* Styles for small screens (e.g., mobile phones) */
-    .mat-mdc-tab-labels {
-        width: 65% !important;
-    }
-}
+//     /* Styles for small screens (e.g., mobile phones) */
+//     .mat-mdc-tab-labels {
+//         width: 65% !important;
+//     }
+//     :host ::ng-deep .viewport:first-child .mat-mdc-tab-labels {
+//         width: 100% !important;
+//         /* Adjust width for viewport with 4 items */
+//     }
 
-app-gallery {
-    z-index: 10000 !important;
-}
+//     /* Styles for the second cdk-virtual-scroll-viewport with 6 items */
+//     :host ::ng-deep .viewport:last-child .mat-mdc-tab-labels {
+//         width: 80% !important;
+//         /* Adjust width for viewport with 6 items */
+//     }
+// }
 
-@media only screen and (min-width: 377px) and (max-width: 400px) {
+// app-gallery {
+//     z-index: 10000 !important;
+// }
 
-    /* Styles for medium screens (e.g., tablets) */
-    .mat-mdc-tab-labels {
-        width: 70% !important;
-        /* Adjust width for tablets */
-    }
+// @media only screen and (min-width: 377px) and (max-width: 400px) {
 
-    .mat-mdc-tab-body-wrapper {}
-}
+//     /* Styles for medium screens (e.g., tablets) */
+//     .mat-mdc-tab-labels {
+//         width: 70% !important;
+//         /* Adjust width for tablets */
+//     }
 
-@media only screen and (min-width: 401px) and (max-width: 430px) {
+//     .mat-mdc-tab-body-wrapper {}
+// }
 
-    /* Styles for medium screens (e.g., tablets) */
-    .mat-mdc-tab-labels {
-        width: 80% !important;
-        /* Adjust width for tablets */
-    }
+// @media only screen and (min-width: 401px) and (max-width: 430px) {
 
-    .mat-mdc-tab-body-wrapper {}
-}
+//     /* Styles for medium screens (e.g., tablets) */
+//     .mat-mdc-tab-labels {
+//         width: 80% !important;
+//         /* Adjust width for tablets */
+//     }
 
-@media only screen and (min-width: 451px) and (max-width: 550px) {
+//     .mat-mdc-tab-body-wrapper {}
+// }
 
-    /* Styles for large screens (e.g., laptops) */
-    .mat-mdc-tab-labels {
-        width: 80% !important;
-        /* Adjust width for laptops */
-    }
-}
+// @media only screen and (min-width: 451px) and (max-width: 550px) {
 
-@media only screen and (min-width: 551px) and (max-width: 600px) {
+//     /* Styles for large screens (e.g., laptops) */
+//     .mat-mdc-tab-labels {
+//         width: 80% !important;
+//         /* Adjust width for laptops */
+//     }
+// }
 
-    /* Styles for large screens (e.g., laptops) */
-    .mat-mdc-tab-labels {
-        width: 100% !important;
-        /* Adjust width for laptops */
-    }
+// @media only screen and (min-width: 551px) and (max-width: 600px) {
 
-    .cdk-virtual-scroll-content-wrapper {
-        width: 100% !important;
-    }
-}
+//     /* Styles for large screens (e.g., laptops) */
+//     .mat-mdc-tab-labels {
+//         width: 100% !important;
+//         /* Adjust width for laptops */
+//     }
 
-@media only screen and (min-width: 601px) and (max-width: 700px) {
+//     .cdk-virtual-scroll-content-wrapper {
+//         width: 100% !important;
+//     }
+// }
 
-    /* Styles for large screens (e.g., laptops) */
-    .mat-mdc-tab-labels {
-        width: 100% !important;
-        /* Adjust width for laptops */
-    }
+// @media only screen and (min-width: 601px) and (max-width: 700px) {
 
-    .cdk-virtual-scroll-content-wrapper {
-        width: 100% !important;
-    }
-}
+//     /* Styles for large screens (e.g., laptops) */
+//     .mat-mdc-tab-labels {
+//         width: 100% !important;
+//         /* Adjust width for laptops */
+//     }
 
-@media only screen and (min-width: 701px) {
+//     .cdk-virtual-scroll-content-wrapper {
+//         width: 100% !important;
+//     }
+// }
 
-    /* Styles for extra large screens (e.g., large desktops) */
-    .mat-mdc-tab-labels {
-        width: 100% !important;
-        /* Adjust width for large desktops */
-    }
+// @media only screen and (min-width: 701px) {
 
-    .cdk-virtual-scroll-content-wrapper {
-        width: 100% !important;
-    }
-}
+//     /* Styles for extra large screens (e.g., large desktops) */
+//     .mat-mdc-tab-labels {
+//         width: 100% !important;
+//         /* Adjust width for large desktops */
+//     }
+
+//     .cdk-virtual-scroll-content-wrapper {
+//         width: 100% !important;
+//     }
+// }
 
 .mat-mdc-tab-body.mat-mdc-tab-body-active {
     position: relative;
@@ -336,6 +408,14 @@ app-gallery {
     cursor: pointer;
     -webkit-appearance: none;
     // z-index: 1;
+}
+
+.cdk-virtual-scroll-content-wrapper {
+    width: calc(100vw - 10px) !important;
+}
+
+.mat-mdc-tab-header-pagination {
+    display: none !important;
 }
 
 .mat-mdc-tab-body {

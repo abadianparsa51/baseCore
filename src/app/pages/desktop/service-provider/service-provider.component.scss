@@ -47,6 +47,10 @@ cdk-virtual-scroll-viewport {
   margin-right: 0px;
   overflow: hidden !important;
   padding: 0px;
-  // background-color: #f0f0f0;
-  // border-top: 1px solid #ddd;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
+}
+
+:host ::ng-deep .viewport .mdc-tab {
+  min-width: 85px !important;
 }
